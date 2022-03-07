@@ -1,5 +1,5 @@
-com\skycloud\asciiPanel\AsciiCharacterData.class
-com\skycloud\asciiPanel\AsciiFont.class
 com\skycloud\asciiPanel\AsciiPanel.class
+com\skycloud\asciiPanel\AsciiFont.class
 com\skycloud\asciiPanel\TileTransformer.class
+com\skycloud\asciiPanel\AsciiCharacterData.class
 com\skycloud\Main.class

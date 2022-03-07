@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="asciiFont" class="com.skycloud.asciiPanel.AsciiFont">
+        <constructor-arg type = "java.lang.String" value="png_resources/talryth_square_15x15.png"></constructor-arg>
+        <constructor-arg type = "int" value="15"></constructor-arg>
+        <constructor-arg type = "int" value="15"></constructor-arg>
+    </bean>
+
+    <bean id="asciiPanel" class="com.skycloud.asciiPanel.AsciiPanel">
+        <constructor-arg type = "int" value="70"></constructor-arg>
+        <constructor-arg type = "int" value="26"></constructor-arg>
+        <constructor-arg ref="asciiFont"></constructor-arg>
+    </bean>
+
+</beans>

@@ -30,5 +30,6 @@ public class Main {
         jFrame.pack();
         asciiPanel.write("Welcome to Software Architecture!");
         jFrame.setVisible(true);
+        jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 }

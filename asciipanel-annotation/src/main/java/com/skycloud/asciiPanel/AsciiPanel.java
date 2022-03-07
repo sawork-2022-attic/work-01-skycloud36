@@ -112,7 +112,7 @@ public class AsciiPanel extends JPanel {
     private int heightInCharacters;
     private int charWidth = 9;
     private int charHeight = 16;
-    private String terminalFontFile = "cp437_9x16.png";
+    private String terminalFontFile = "png_resources/cp437_9x16.png";
     private Color defaultBackgroundColor;
     private Color defaultForegroundColor;
     private int cursorX;
@@ -410,7 +410,7 @@ public class AsciiPanel extends JPanel {
 
     private void loadGlyphs() {
         try {
-            glyphSprite = ImageIO.read(AsciiPanel.class.getClassLoader().getResource("cp437_9x16.png"));
+            glyphSprite = ImageIO.read(AsciiPanel.class.getClassLoader().getResource(terminalFontFile));
         } catch (IOException e) {
             System.err.println("loadGlyphs(): " + e.getMessage());
         }
