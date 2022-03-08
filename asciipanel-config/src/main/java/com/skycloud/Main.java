@@ -2,8 +2,9 @@ package com.skycloud;
 
 import com.skycloud.asciiPanel.AsciiFont;
 import com.skycloud.asciiPanel.AsciiPanel;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import com.skycloud.config.AsciiPanelConfig;
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import javax.swing.*;
 
@@ -15,7 +16,7 @@ public class Main
 {
     public static void main( String[] args )
     {
-        ApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(com.skycloud.config.AsciiPanelConfig.class);
 
         AsciiFont asciiFont = context.getBean("asciiFont", AsciiFont.class);
         System.out.println( "asciiFont: " + asciiFont.getFontFilename() + " " +
@@ -23,9 +24,9 @@ public class Main
 
         AsciiPanel asciiPanel = context.getBean("asciiPanel", AsciiPanel.class);
         System.out.println("asciiPanel: " + asciiPanel.getAsciiFont().getFontFilename() + " " +
-                asciiPanel.getAsciiFont().getWidth() + " " + asciiPanel.getAsciiFont().getHeight());
+                asciiPanel.getWidthInCharacters() + " " + asciiPanel.getHeightInCharacters());
 
-        asciiPanel.write("Welcome to SKYCLOUD XML-config");
+        asciiPanel.write("Welcome to SKYCLOUD java-config");
         JFrame jFrame = new JFrame();
         jFrame.add(asciiPanel);
         jFrame.pack();

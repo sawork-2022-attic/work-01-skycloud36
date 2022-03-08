@@ -28,7 +28,7 @@ public class Main {
         JFrame jFrame = new JFrame();
         jFrame.add(asciiPanel);
         jFrame.pack();
-        asciiPanel.write("Welcome to Software Architecture!");
+        asciiPanel.write("Welcome SKYCLOUD annotation");
         jFrame.setVisible(true);
         jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
